@@ -1,0 +1,66 @@
+{
+  "Password": {
+    "defaultMessage": "Password",
+    "description": "password"
+  },
+  "amount": {
+    "defaultMessage": "Amount",
+    "description": "amount"
+  },
+  "confirmPassword": {
+    "defaultMessage": "Cofirm Password",
+    "description": "confirm password"
+  },
+  "currency": {
+    "defaultMessage": "Currency",
+    "description": "currency"
+  },
+  "doNotHaveAnAccount": {
+    "defaultMessage": "Don't have an account?",
+    "description": "do not have an account?"
+  },
+  "doYouHaveAnAccount": {
+    "defaultMessage": "Do you have an account?",
+    "description": "do you have an account?"
+  },
+  "email": {
+    "defaultMessage": "Email",
+    "description": "email"
+  },
+  "exchange": {
+    "defaultMessage": "Exchange",
+    "description": "exchange"
+  },
+  "firstName": {
+    "defaultMessage": "firstName",
+    "description": "firstName"
+  },
+  "lastName": {
+    "defaultMessage": "lastName",
+    "description": "lastName"
+  },
+  "phoneNumber": {
+    "defaultMessage": "phoneNumber",
+    "description": "phoneNumber"
+  },
+  "signIn": {
+    "defaultMessage": "Sign In",
+    "description": "sign in"
+  },
+  "signUp": {
+    "defaultMessage": "Sign Up",
+    "description": "sign up"
+  },
+  "wallet": {
+    "defaultMessage": "Wallet",
+    "description": "wallet"
+  },
+  "youGet": {
+    "defaultMessage": "You get:",
+    "description": "you get:"
+  },
+  "youHave": {
+    "defaultMessage": "You have:",
+    "description": "you have:"
+  }
+}

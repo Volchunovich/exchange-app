@@ -1,0 +1,98 @@
+{
+  "Password": [
+    {
+      "type": 0,
+      "value": "Пароль"
+    }
+  ],
+  "amount": [
+    {
+      "type": 0,
+      "value": "Сумма"
+    }
+  ],
+  "confirmPassword": [
+    {
+      "type": 0,
+      "value": "Подтвердите пароль"
+    }
+  ],
+  "currency": [
+    {
+      "type": 0,
+      "value": "Валюта"
+    }
+  ],
+  "doNotHaveAnAccount": [
+    {
+      "type": 0,
+      "value": "Нет аккаунта?"
+    }
+  ],
+  "doYouHaveAnAccount": [
+    {
+      "type": 0,
+      "value": "Уже есть аккаунт?"
+    }
+  ],
+  "email": [
+    {
+      "type": 0,
+      "value": "Е-майл"
+    }
+  ],
+  "exchange": [
+    {
+      "type": 0,
+      "value": "Обмен"
+    }
+  ],
+  "firstName": [
+    {
+      "type": 0,
+      "value": "Имя"
+    }
+  ],
+  "lastName": [
+    {
+      "type": 0,
+      "value": "Фамилия"
+    }
+  ],
+  "phoneNumber": [
+    {
+      "type": 0,
+      "value": "Телефон"
+    }
+  ],
+  "signIn": [
+    {
+      "type": 0,
+      "value": "Войти"
+    }
+  ],
+  "signUp": [
+    {
+      "type": 0,
+      "value": "Зарегистрироваться"
+    }
+  ],
+  "wallet": [
+    {
+      "type": 0,
+      "value": "Кошелек"
+    }
+  ],
+  "youGet": [
+    {
+      "type": 0,
+      "value": "Вы получите:"
+    }
+  ],
+  "youHave": [
+    {
+      "type": 0,
+      "value": "Хотите обменять:"
+    }
+  ]
+}

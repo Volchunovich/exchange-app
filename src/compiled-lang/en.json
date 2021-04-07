@@ -1,0 +1,98 @@
+{
+  "Password": [
+    {
+      "type": 0,
+      "value": "Password"
+    }
+  ],
+  "amount": [
+    {
+      "type": 0,
+      "value": "Amount"
+    }
+  ],
+  "confirmPassword": [
+    {
+      "type": 0,
+      "value": "Cofirm Password"
+    }
+  ],
+  "currency": [
+    {
+      "type": 0,
+      "value": "Currency"
+    }
+  ],
+  "doNotHaveAnAccount": [
+    {
+      "type": 0,
+      "value": "Don't have an account?"
+    }
+  ],
+  "doYouHaveAnAccount": [
+    {
+      "type": 0,
+      "value": "Do you have an account?"
+    }
+  ],
+  "email": [
+    {
+      "type": 0,
+      "value": "Email"
+    }
+  ],
+  "exchange": [
+    {
+      "type": 0,
+      "value": "Exchange"
+    }
+  ],
+  "firstName": [
+    {
+      "type": 0,
+      "value": "First Name"
+    }
+  ],
+  "lastName": [
+    {
+      "type": 0,
+      "value": "Last Name"
+    }
+  ],
+  "phoneNumber": [
+    {
+      "type": 0,
+      "value": "Phone number"
+    }
+  ],
+  "signIn": [
+    {
+      "type": 0,
+      "value": "Sign In"
+    }
+  ],
+  "signUp": [
+    {
+      "type": 0,
+      "value": "Sign Up"
+    }
+  ],
+  "wallet": [
+    {
+      "type": 0,
+      "value": "Wallet"
+    }
+  ],
+  "youGet": [
+    {
+      "type": 0,
+      "value": "You get:"
+    }
+  ],
+  "youHave": [
+    {
+      "type": 0,
+      "value": "You have:"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "Password": {
+    "defaultMessage": "Пароль",
+    "description": "password"
+  },
+  "confirmPassword": {
+    "defaultMessage": "Подтвердите пароль",
+    "description": "confirm password"
+  },
+  "doNotHaveAnAccount": {
+    "defaultMessage": "Нет аккаунта?",
+    "description": "do not have an account?"
+  },
+  "doYouHaveAnAccount": {
+    "defaultMessage": "Уже есть аккаунт?",
+    "description": "do you have an account?"
+  },
+  "email": {
+    "defaultMessage": "Е-майл",
+    "description": "email"
+  },
+  "firstName": {
+    "defaultMessage": "Имя",
+    "description": "firstName"
+  },
+  "lastName": {
+    "defaultMessage": "Фамилия",
+    "description": "lastName"
+  },
+  "phoneNumber": {
+    "defaultMessage": "Телефон",
+    "description": "phoneNumber"
+  },
+  "signIn": {
+    "defaultMessage": "Войти",
+    "description": "sign in"
+  },
+  "signUp": {
+    "defaultMessage": "Зарегистрироваться",
+    "description": "sign up"
+  },
+
+  "amount": {
+    "defaultMessage": "Сумма",
+    "description": "amount"
+  },
+  "currency": {
+    "defaultMessage": "Валюта",
+    "description": "currency"
+  },
+  "exchange": {
+    "defaultMessage": "Обмен",
+    "description": "exchange"
+  },
+  "wallet": {
+    "defaultMessage": "Кошелек",
+    "description": "wallet"
+  },
+  "youGet": {
+    "defaultMessage": "Вы получите:",
+    "description": "you get:"
+  },
+  "youHave": {
+    "defaultMessage": "Хотите обменять:",
+    "description": "you have:"
+  }
+}
