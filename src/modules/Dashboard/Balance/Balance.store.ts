@@ -3,6 +3,7 @@ import { HttpClientV1 } from '../../../utils/api/HttpClientV1';
 import { AuthStore } from '../../Auth/Auth.store';
 import { InBalanceDTO } from './Balance.types';
 import { BalanceModel } from "./Balance.model";
+import { makeAutoObservable, runInAction } from 'mobx';
 
 @provide.singleton()
 export class BalanceStore {
@@ -14,6 +15,10 @@ export class BalanceStore {
 
   balances: BalanceModel[] = [];
 
+  constructor() {
+    makeAutoObservable(this);
+  }
+
   async fetchBalances() {
     try {
       const options = {
@@ -23,7 +28,9 @@ export class BalanceStore {
       }
   
       const balances = await this.api.get<InBalanceDTO[]>('user/balance', options);
-      this.balances = balances.map(balance => new BalanceModel(balance));
+      runInAction(() => {
+        this.balances = balances.map(balance => new BalanceModel(balance)); 
+      })
     } catch (e) {
       throw new Error(e.message);
     }

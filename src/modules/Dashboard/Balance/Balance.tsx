@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { useIntl, FormattedMessage } from 'react-intl';
+import React, { useEffect } from 'react';
+import { FormattedMessage } from 'react-intl';
 import { makeStyles, Theme } from '@material-ui/core';
 import BalanceItem from './BalanceItem/BalanceItem';
 import { BalanceStore } from './Balance.store';
 import { useStore } from '../../../utils/ioc.util';
+import { observer } from 'mobx-react';
 
 export const useBalanceStyles = makeStyles((theme: Theme) => ({
   root: {},
@@ -12,11 +13,10 @@ export const useBalanceStyles = makeStyles((theme: Theme) => ({
 const Balance = () => {
   const classes = useBalanceStyles();
   const balanceStore = useStore(BalanceStore);
-  const intl = useIntl();
 
   useEffect(() => {
     balanceStore.fetchBalances().catch(console.error);
-  });
+  }, [balanceStore, balanceStore.balances]);
 
   return (
     <div className={classes.root}>
@@ -27,10 +27,14 @@ const Balance = () => {
         />
       </div>
       {balanceStore.balances.map((model) => (
-        <BalanceItem balance={model.balance} currency={model.currency} />
+        <BalanceItem
+          key={model.currency}
+          balance={model.balance}
+          currency={model.currency}
+        />
       ))}
     </div>
   );
 };
 
-export default Balance;
+export default observer(Balance);
