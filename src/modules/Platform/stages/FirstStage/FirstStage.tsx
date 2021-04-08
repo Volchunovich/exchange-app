@@ -14,7 +14,6 @@ import InputMask from 'react-input-mask';
 import { FormattedMessage } from 'react-intl';
 import { useStore } from '../../../../utils/ioc.util';
 import { PlatformStore } from '../../Platform.store';
-import { TransactionStore } from '../../services/Transaction/TransactionStore';
 import { useStyles } from '../../styles';
 
 interface State {
@@ -35,8 +34,8 @@ function FirstStage() {
     showCvc: false,
   });
 
-  const platformStore = useStore(PlatformStore);
-  const transactionStore = useStore(TransactionStore);
+  // const platformStore = useStore(PlatformStore);
+  // const transactionStore = useStore(TransactionStore);
 
   const handleChange = (prop: keyof State) => (
     event: React.ChangeEvent<HTMLInputElement>
@@ -55,9 +54,9 @@ function FirstStage() {
   };
 
   const startBuying = () => {
-    transactionStore.fetchTransaction(values).then((res) => {
-      platformStore.nextStep();
-    });
+    // transactionStore.fetchTransaction(values).then((res) => {
+    //   platformStore.nextStep();
+    // });
   };
 
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {

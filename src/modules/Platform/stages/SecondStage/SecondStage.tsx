@@ -1,8 +1,7 @@
 import { makeStyles } from '@material-ui/core';
 import React from 'react';
 import { useStore } from '../../../../utils/ioc.util';
-import { TransactionStatus } from '../../services/Transaction/TransactionStatus';
-import { TransactionStore } from '../../services/Transaction/TransactionStore';
+import { TransactionStatus } from '../../../Dashboard/Transactions/Transaction.types';
 import { useStyles } from '../../styles';
 
 interface Props {
@@ -39,26 +38,17 @@ function getColorByTransactionStatus(status: TransactionStatus) {
 }
 
 function SecondStage() {
-  const transactionStore = useStore(TransactionStore);
+  // const transactionStore = useStore(TransactionStore);
 
   const classes = useStyles();
   const props = {
-    color: getColorByTransactionStatus(
-      transactionStore.transaction?.status || TransactionStatus.Pending
-    ),
+    color: getColorByTransactionStatus(TransactionStatus.Pending),
   };
   const statusStyles = useStatusStyles(props);
 
   return (
     <div>
-      <div className={classes.root}>
-        <div className={statusStyles.status}>
-          <b>Status</b>: <span>{transactionStore.transaction?.status}</span>
-        </div>
-        <div>id: {transactionStore.transaction?.id}</div>
-        <div>code: {transactionStore.transaction?.code}</div>
-        <div>details: {}</div>
-      </div>
+      <div className={classes.root}>Status</div>
     </div>
   );
 }

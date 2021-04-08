@@ -1,38 +1,13 @@
-import { Button, Modal, TextField, makeStyles, Theme } from '@material-ui/core';
+import { Button, Modal, TextField } from '@material-ui/core';
 import React, { useState } from 'react';
 import { useIntl } from 'react-intl';
-import { BalanceOperation, BalanceCurrency } from '../Balance.types';
-
-export const useBalanceModalStyle = makeStyles((theme: Theme) => ({
-  root: {
-    position: 'absolute',
-    width: 400,
-    backgroundColor: theme.palette.background.paper,
-    border: '2px solid #000',
-    boxShadow: theme.shadows[5],
-    padding: theme.spacing(3),
-
-    '& .MuiTextField-root, .MuiButton-root': {
-      margin: theme.spacing(1),
-    },
-
-    '& #balance-modal-title': {
-      fontSize: '1.3em',
-      borderBottom: '2px solid #3f51b5',
-      margin: theme.spacing(1),
-      textAlign: 'center',
-    },
-
-    '& #balance-modal-description': {
-      display: 'flex',
-      flexDirection: 'column',
-    },
-  },
-}));
+import { TransactionType } from '../../Transactions/Transaction.types';
+import { BalanceCurrency } from '../Balance.types';
+import { useBalanceModalStyle } from './BalanceModal.styles';
 
 interface BalanceModalProps {
   currency: BalanceCurrency;
-  operation: BalanceOperation;
+  operation: TransactionType;
   isOpen: boolean;
   onClose(): void;
 }
@@ -49,6 +24,8 @@ const BalanceModal = ({
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    onClose();
   };
 
   const handleAmountChange = (e: React.ChangeEvent<HTMLInputElement>) => {

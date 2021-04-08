@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { Button } from '@material-ui/core';
-import { BalanceCurrency, BalanceOperation } from '../Balance.types';
+import { BalanceCurrency } from '../Balance.types';
 import { useBalanceItemStyles } from './BalanceItem.styles';
 import BalanceModal from '../BalanceModal/BalanceModal';
+import { TransactionType } from '../../Transactions/Transaction.types';
 
 interface Props {
   currency: BalanceCurrency;
@@ -17,11 +18,11 @@ const currencies = {
 const BalanceItem = ({ balance, currency }: Props) => {
   const classes = useBalanceItemStyles();
   const [isOpen, setOpen] = useState<boolean>(false);
-  const [operation, setOperation] = useState<BalanceOperation>(
-    BalanceOperation.Deposit
+  const [operation, setOperation] = useState<TransactionType>(
+    TransactionType.Deposit
   );
 
-  const handleOperation = (prop: BalanceOperation) => (
+  const handleOperation = (prop: TransactionType) => (
     e: React.MouseEvent<HTMLButtonElement>
   ) => {
     e.preventDefault();
@@ -53,13 +54,13 @@ const BalanceItem = ({ balance, currency }: Props) => {
 
           <div className={classes.buttons}>
             <Button
-              onClick={handleOperation(BalanceOperation.Deposit)}
+              onClick={handleOperation(TransactionType.Deposit)}
               color='primary'
               variant='contained'>
               Deposit
             </Button>
             <Button
-              onClick={handleOperation(BalanceOperation.Withdraw)}
+              onClick={handleOperation(TransactionType.Withdraw)}
               color='primary'
               variant='contained'>
               Withdraw
