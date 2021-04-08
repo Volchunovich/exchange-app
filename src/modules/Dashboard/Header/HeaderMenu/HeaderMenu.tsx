@@ -9,7 +9,7 @@ import {
 } from '@material-ui/core';
 import React, { useState, useEffect } from 'react';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
-import { AuthStore } from '../../../Auth/AuthStore';
+import { AuthStore } from '../../../Auth/Auth.store';
 import { useStore } from '../../../../utils/ioc.util';
 import { useHistory } from 'react-router-dom';
 import { UserStore } from '../../User/User.store';

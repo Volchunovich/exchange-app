@@ -1,5 +1,5 @@
 import { lazyInject, provide } from "../../../utils/ioc.util";
-import { AuthStore } from '../../Auth/AuthStore';
+import { AuthStore } from '../../Auth/Auth.store';
 import { makeAutoObservable } from 'mobx';
 import { UserModel } from './User.model';
 import { UserInDTO } from "./User.types";
@@ -11,7 +11,7 @@ export class UserStore {
   @lazyInject(AuthStore)
   private readonly authStore!: AuthStore;
 
-  @lazyInject(HttpClientV1)
+  @lazyInject(HttpClientV1) 
   private readonly api!: HttpClientV1;
 
   userModel!: UserModel;

@@ -13,7 +13,7 @@ import React, { useState } from 'react';
 import { FormattedMessage, useIntl } from 'react-intl';
 import { Link, useHistory } from 'react-router-dom';
 import { useStore } from '../../../utils/ioc.util';
-import { AuthStore } from '../AuthStore';
+import { AuthStore } from '../Auth.store';
 import { useLoginStyles } from './Login.styles';
 import { OutLoginDTO } from '../Auth.types';
 

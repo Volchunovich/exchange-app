@@ -10,9 +10,9 @@ import {
 import { Visibility, VisibilityOff } from '@material-ui/icons';
 import React, { useState } from 'react';
 import { FormattedMessage, useIntl } from 'react-intl';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { useStore } from '../../../utils/ioc.util';
-import { AuthStore } from '../AuthStore';
+import { AuthStore } from '../Auth.store';
 import { useRegistrationStyles } from './Registration.styles';
 
 interface State {
@@ -28,6 +28,7 @@ interface State {
 const Registration = () => {
   const classes = useRegistrationStyles();
   const intl = useIntl();
+  const history = useHistory();
   const store = useStore(AuthStore);
 
   const [values, setValues] = useState<State>({
@@ -66,7 +67,9 @@ const Registration = () => {
         phoneNumber: values.phoneNumber,
       };
 
-      store.register(payload);
+      store.register(payload).then(() => {
+        history.push('/login');
+      });
     }
   };
 
@@ -160,7 +163,6 @@ const Registration = () => {
         </InputLabel>
         <OutlinedInput
           id='outlined-adornment-password'
-          multiline
           type={values.showPassword ? 'text' : 'password'}
           value={values.confirmPassword}
           onChange={handleChange('confirmPassword')}
