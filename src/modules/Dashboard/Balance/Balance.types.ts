@@ -1,6 +1,6 @@
 export enum BalanceCurrency {
-  Euro = 'euro',
-  Dollar = 'dollar',
+  EUR = 'eur',
+  USD = 'usd',
 }
 
 export interface InBalanceDTO {

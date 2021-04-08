@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, makeStyles, Theme } from '@material-ui/core';
+import { BalanceCurrency } from '../Balance.types';
 
 export const useBalanceItemStyles = makeStyles((theme: Theme) => ({
   buttons: {
@@ -10,15 +11,9 @@ export const useBalanceItemStyles = makeStyles((theme: Theme) => ({
   mainContainer: {
     padding: '6px',
     borderBottom: '2px solid #3f51b5',
-    // boxShadow: '0px 0px 3px #000',
-
-    // backgroundImage:
-    // 'linear-gradient(to top, #3f51b5, #6c6ec3, #918dd1, #b3aedf, #d4d0ed, #e2dff3, #f1eff9, #fafafa, #fafafa, #fafafa, #fafafa, #fafafa)',
   },
   subContainer: {
     padding: '18px',
-    // borderBottom: '2px solid #000',
-    // background: '#ffffff',
 
     display: 'flex',
     alignItems: 'center',
@@ -27,17 +22,24 @@ export const useBalanceItemStyles = makeStyles((theme: Theme) => ({
 }));
 
 interface Props {
-  prefix: string;
-  balance: string;
+  currency: BalanceCurrency;
+  balance: number;
 }
 
-const BalanceItem = ({ balance, prefix }: Props) => {
+const currencies = {
+  [BalanceCurrency.USD]: '$',
+  [BalanceCurrency.EUR]: '€',
+};
+
+const BalanceItem = ({ balance, currency }: Props) => {
   const classes = useBalanceItemStyles();
+
   return (
     <div className={classes.mainContainer}>
       <div className={classes.subContainer}>
         <div>
-          {prefix} - {balance}
+          {currencies[currency]} ({currency.toUpperCase()}) -{' '}
+          {balance.toFixed(6)}
         </div>
 
         <div className={classes.buttons}>
